@@ -3,6 +3,7 @@ import HeadingTwo from "./ui/HeadingTwo.astro";
 import Section from "./ui/Section.astro";
 
 import { Image } from "astro:assets";
+import phone from "../img/svg/phone.svg"
 import mail from "../img/svg/mail.svg"
 import location from "../img/svg/location.svg"
 import nip from "../img/svg/nip.svg"
@@ -14,7 +15,7 @@ import nip from "../img/svg/nip.svg"
     <div class="flex flex-col lg:flex-row justify-between w-full lg:space-x-8">
       <div class="w-full lg:w-1/2">
         <div class="flex items-center mb-6">
-          <img src="/src/img/svg/phone.svg" alt="" />
+          <Image src={phone} alt="" />
           <div class="flex flex-col justify-center ml-4">
             <h4 class="font-black text-main">Telefon</h4>
             <a class="font-bold text-xl md:text-2xl" href="#">+48 736 406 807</a>
@@ -73,7 +74,7 @@ import nip from "../img/svg/nip.svg"
             class="bg-main border-2 border-second rounded-md placeholder-second px-4 py-2 mb-6 focus:outline-none focus:ring focus:ring-main"
             placeholder="Wiadomość"></textarea>
           <input
-            class="bg-main border-2 border-second rounded-md placeholder-second px-4 py-2 w-min self-end mb-6 cursor-pointer hover:"
+            class="bg-main border-2 border-second rounded-md placeholder-second px-4 py-2 w-min self-end cursor-pointer hover:"
             type="submit"
             value="Wyślij"
           />
