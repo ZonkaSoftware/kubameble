@@ -82,13 +82,9 @@ const Images = ({ imgIndex }) => {
     <>
       {imgs.map((imgSrc, idx) => {
         return (
-          <motion.div
+          <motion.img
             key={idx}
-            style={{
-              backgroundImage: `url(${imgSrc})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
+            src={imgSrc.src}
             animate={{
               scale: imgIndex === idx ? 1 : 0.9,
             }}
