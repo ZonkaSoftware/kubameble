@@ -40,18 +40,19 @@ body {
 .module {
   clip-path: polygon(75% 0, 100% 25%, 100% 100%, 0 100%, 0 0);
 }
-/* body::-webkit-scrollbar {
+body::-webkit-scrollbar {
     width: 1em;
   }
   
-  body::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  }
   
   body::-webkit-scrollbar-thumb {
-    background-color: #adb5bd;
-    outline: 1px solid slategrey;
+    background-color: #BBC274;
+    outline: 1px solid #BBC274;
     border-radius: 8px;
   }
   
-   */
+  
+  ::selection {
+    color: white;
+    background: #BBC274;
+  }

@@ -8,8 +8,8 @@ import Info from "../components/Info.astro";
 import Contact from "../components/Contact.astro";
 
 import { Image } from "astro:assets";
-import line1 from "../img/svg/line1.svg"
-import line2 from "../img/svg/line2.svg"
+import line1 from "../img/svg/line1.svg";
+import line2 from "../img/svg/line2.svg";
 ---
 
 <Layout title="Kuba Meble">
@@ -19,16 +19,16 @@ import line2 from "../img/svg/line2.svg"
     <Navigation />
     <SwipeCarousel client:load />
     <span class="absolute bottom-0 left-0 -z-10 hidden lg:block"
-      ><Image  src={line1} alt="" /></span
+      ><Image src={line1} alt="" /></span
     >
     <span class="absolute top-0 right-0 -z-10 hidden lg:block"
-      ><Image  src={line2} alt="" /></span
+      ><Image src={line2} alt="" /></span
     >
   </div>
   <main>
     <HowWeWork />
-    <StaggerTestimonials client:load/>
-    <Info/>
-    <Contact/>
+    <StaggerTestimonials client:load />
+    <Info />
+    <Contact />
   </main>
 </Layout>
