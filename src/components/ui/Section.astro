@@ -1,3 +1,11 @@
-<section class="mt-12 md:my-24">
+---
+interface Props {
+  id?: string;
+}
+
+const { id } = Astro.props;
+---
+
+<section id=`${id}` class="mt-12 md:my-24">
   <slot />
 </section>

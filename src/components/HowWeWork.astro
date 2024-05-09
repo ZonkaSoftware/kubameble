@@ -12,12 +12,12 @@ import question from "../img/svg/question.svg"
 
 ---
 
-<Section id ="jakpracujemy">
+<Section id="jakpracujemy">
   <div class="relative container">
     <HeadingTwo h2="Jak pracujemy" />
 
-    <div class="grid grid-rows-4 grid-cols-1 md:grid-rows-2 md:grid-cols-2 xl:grid-cols-6  xl:grid-rows-2">
-      <div class="xl:row-end-2 xl:col-span-2 mb-10">
+    <div class="grid grid-rows-4 grid-cols-1 md:grid-cols-6 md:grid-rows-2">
+      <div class="md:row-end-2 md:col-span-3 lg:col-span-2 mb-6 md:mr-10 md:mb-10">
         <Image height="70" width="70" src={bulb} alt="" />
         <HeadingThree h3="Pomysły" />
         <p>
@@ -26,7 +26,7 @@ import question from "../img/svg/question.svg"
         </p>
       </div>
 
-      <div class="xl:row-end-2 col-span-2 mb-10">
+      <div class="md:row-end-2 md:col-span-3 lg:col-span-2 mb-6 md:mb-10">
         <Image height="70" width="70" src={measurement} alt="" />
         <HeadingThree h3="Pomiar" />
         <p>
@@ -35,7 +35,7 @@ import question from "../img/svg/question.svg"
         </p>
       </div>
 
-      <div class="xl:row-end-3	xl:col-span-2 mb-10">
+      <div class="md:row-end-3	md:col-span-3 lg:col-span-2 mb-6 md:mb-0 md:mr-10">
         <Image height="70" width="70" src={project} alt="" />
         <HeadingThree h3="Projekt" />
         <p>
@@ -44,7 +44,7 @@ import question from "../img/svg/question.svg"
         </p>
       </div>
 
-      <div class="xl:row-end-3	col-span-2">
+      <div class="md:row-end-3	md:col-span-3 lg:col-span-2">
         <Image height="70" width="70" src={hamer} alt="" />
         <HeadingThree h3="Realizacja" />
         <p>
@@ -54,7 +54,7 @@ import question from "../img/svg/question.svg"
       </div>
     </div>
 
-    <span class="hidden xl:block absolute font-black text-6xl text-main right-0 top-0">
+    <span class="hidden lg:block absolute font-black text-6xl text-main right-0 top-0 -z-10">
       <Image src={question} alt="?" />
     </span>
   </div>
