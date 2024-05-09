@@ -6,6 +6,10 @@ import Layout from "../layouts/Layout.astro";
 import { StaggerTestimonials } from "../components/Opinions";
 import Info from "../components/Info.astro";
 import Contact from "../components/Contact.astro";
+
+import { Image } from "astro:assets";
+import line1 from "../img/svg/line1.svg"
+import line2 from "../img/svg/line2.svg"
 ---
 
 <Layout title="Kuba Meble">
@@ -15,10 +19,10 @@ import Contact from "../components/Contact.astro";
     <Navigation />
     <SwipeCarousel client:load />
     <span class="absolute bottom-0 left-0 -z-10 hidden xl:block"
-      ><img src="/src/img/svg/line1.svg" alt="" /></span
+      ><Image src={line1} alt="" /></span
     >
     <span class="absolute top-0 right-0 -z-10 hidden xl:block"
-      ><img src="/src/img/svg/line2.svg" alt="" /></span
+      ><Image src={line2} alt="" /></span
     >
   </div>
   <main>
