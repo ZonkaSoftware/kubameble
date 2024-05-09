@@ -1,6 +1,11 @@
 ---
 import HeadingTwo from "./ui/HeadingTwo.astro";
 import Section from "./ui/Section.astro";
+
+import { Image } from "astro:assets";
+import mail from "../img/svg/mail.svg"
+import location from "../img/svg/location.svg"
+import nip from "../img/svg/nip.svg"
 ---
 
 <Section>
@@ -17,7 +22,7 @@ import Section from "./ui/Section.astro";
         </div>
 
         <div class="flex items-center mb-6">
-          <img src="/src/img/svg/mail.svg" alt="" />
+          <Image src={mail} alt="" />
           <div class="flex flex-col justify-center ml-4">
             <h4 class="font-black text-main">Email</h4>
             <a class="font-bold text-2xl" href="#">plewameble@gmail.com</a>
@@ -25,7 +30,7 @@ import Section from "./ui/Section.astro";
         </div>
 
         <div class="flex items-center mb-6">
-          <img src="/src/img/svg/location.svg" alt="" />
+          <Image src={location} alt="" />
           <div class="flex flex-col justify-center ml-4">
             <h4 class="font-black text-main">Adres</h4>
             <a class="font-bold text-2xl" href="#"
@@ -35,7 +40,7 @@ import Section from "./ui/Section.astro";
         </div>
 
         <div class="flex items-center">
-          <img src="/src/img/svg/nip.svg" alt="" />
+          <Image src={nip} alt="" />
           <div class="flex flex-col justify-center ml-4">
             <h4 class="font-black text-main">NIP</h4>
             <p class="font-bold text-2xl">5030089148</p>
@@ -56,7 +61,7 @@ import Section from "./ui/Section.astro";
           />
           <input
             class="bg-main border-2 border-second rounded-md placeholder-second px-4 py-2 mb-4"
-            type="number"
+            type="text"
             placeholder="Numer telefonu"
           />
           <input

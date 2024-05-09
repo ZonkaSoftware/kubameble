@@ -1,8 +1,15 @@
+---
+import { Image } from "astro:assets";
+import logo from "../../img/logo.jpg"
+import line1 from "../../img/svg/line1.svg"
+import line2 from "../../img/svg/line2.svg"
+
+---
 <nav class="fixed top-0 w-full bg-white shadow-md py-2 md:py-4 z-50">
   <div class="container flex justify-between items-center">
     <a href="#"
-      ><img
-        src="/src/img/logo.jpg"
+      ><Image
+        src={logo}
         height="150"
         width="150"
         alt="logo kuba meble zrobić ci kuchnię?"
@@ -29,11 +36,11 @@
       >
 
       <span class="absolute left-0 right-0 top-0 md:hidden">
-        <img src="/src/img/svg/line1.svg" height="300" width="300" alt="" />
+        <Image src={line1} height="300" width="300" alt="" />
       </span>
       <span class="absolute right-0 bottom-[-20%] md:hidden">
-        <img
-          src="/src/img/svg/line2.svg"
+        <Image
+          src={line2}
           height="500"
           width="500"
           alt=""
