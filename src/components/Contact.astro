@@ -1,0 +1,80 @@
+---
+import HeadingTwo from "./ui/HeadingTwo.astro";
+import Section from "./ui/Section.astro";
+---
+
+<Section>
+  <div class="relative container flex flex-col items-center">
+    <HeadingTwo class="text-center" h2="Kontakt" />
+    <div class="flex flex-col lg:flex-row justify-between w-full lg:space-x-8">
+      <div class="w-full lg:w-1/2">
+        <div class="flex items-center mb-6">
+          <img src="/src/img/svg/phone.svg" alt="" />
+          <div class="flex flex-col justify-center ml-4">
+            <h4 class="font-black text-main">Telefon</h4>
+            <a class="font-bold text-2xl" href="#">+48 736 406 807</a>
+          </div>
+        </div>
+
+        <div class="flex items-center mb-6">
+          <img src="/src/img/svg/mail.svg" alt="" />
+          <div class="flex flex-col justify-center ml-4">
+            <h4 class="font-black text-main">Email</h4>
+            <a class="font-bold text-2xl" href="#">plewameble@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="flex items-center mb-6">
+          <img src="/src/img/svg/location.svg" alt="" />
+          <div class="flex flex-col justify-center ml-4">
+            <h4 class="font-black text-main">Adres</h4>
+            <a class="font-bold text-2xl" href="#"
+              >Kowalewo Pomorskie, Odrodzenia 22</a
+            >
+          </div>
+        </div>
+
+        <div class="flex items-center">
+          <img src="/src/img/svg/nip.svg" alt="" />
+          <div class="flex flex-col justify-center ml-4">
+            <h4 class="font-black text-main">NIP</h4>
+            <p class="font-bold text-2xl">5030089148</p>
+          </div>
+        </div>
+      </div>
+      <div class="w-full lg:w-1/2">
+        <form class="flex flex-col">
+          <input
+            class="bg-main border-2 border-second rounded-md placeholder-second px-4 py-2 mb-4"
+            type="text"
+            placeholder="Imię"
+          />
+          <input
+            class="bg-main border-2 border-second rounded-md placeholder-second px-4 py-2 mb-4"
+            type="text"
+            placeholder="Nazwisko"
+          />
+          <input
+            class="bg-main border-2 border-second rounded-md placeholder-second px-4 py-2 mb-4"
+            type="number"
+            placeholder="Numer telefonu"
+          />
+          <input
+            class="bg-main border-2 border-second rounded-md placeholder-second px-4 py-2 mb-4"
+            type="email"
+            placeholder="Email"
+          />
+          <textarea
+            class="bg-main border-2 border-second rounded-md placeholder-second px-4 py-2 mb-4"
+            placeholder="Wiadomość"></textarea>
+          <input
+            class="bg-main border-2 border-second rounded-md placeholder-second px-4 py-2 w-min self-end"
+            type="submit"
+            value="Wyślij"
+          />
+        </form>
+      </div>
+    </div>
+    
+  </div>
+</Section>

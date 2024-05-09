@@ -1,0 +1,8 @@
+---
+interface Props {
+    h3:string;
+}
+
+const {h3} = Astro.props;
+---
+<h3 class="font-bold uppercase text-xl tracking-wide my-2 md:text-2xl">{Astro.props.h3}</h3>

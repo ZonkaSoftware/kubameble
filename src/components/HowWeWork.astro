@@ -1,0 +1,53 @@
+---
+import HeadingTwo from "./ui/HeadingTwo.astro";
+import HeadingThree from "./ui/HeadingThree.astro";
+import Section from "./ui/Section.astro";
+---
+
+<Section id ="jakpracujemy">
+  <div class="relative container">
+    <HeadingTwo h2="Jak pracujemy" />
+
+    <div class="grid grid-rows-4 grid-cols-1 md:grid-rows-2 md:grid-cols-2 xl:grid-cols-6  xl:grid-rows-2">
+      <div class="xl:row-end-2 xl:col-span-2 mb-10">
+        <img height="70" width="70" src="/src/img/svg/bulb.svg" alt="" />
+        <HeadingThree h3="Pomysły" />
+        <p>
+          Najważniejszy jest pomysł. Jeśli masz koncepcję, powiedz nam o niej.
+          Jeśli nie, zdaj się na nasze doświadczenie.
+        </p>
+      </div>
+
+      <div class="xl:row-end-2 col-span-2 mb-10">
+        <img height="70" width="70" src="/src/img/svg/measurement.svg" alt="" />
+        <HeadingThree h3="Pomiar" />
+        <p>
+          Ocenimy jakie rozwiązania najlepiej sprawdzą się w aranżowanych
+          wnętrzach, proponując Ci te najbardziej dopasowane do Twoich potrzeb.
+        </p>
+      </div>
+
+      <div class="xl:row-end-3	xl:col-span-2 mb-10">
+        <img height="70" width="70" src="/src/img/svg/project.svg" alt="" />
+        <HeadingThree h3="Projekt" />
+        <p>
+          Przedstawimy Ci nasz projekt, nad którym bedziemy pracowali dalej
+          wspólnie. Wybierzesz materiały, kolory i wykończenia.
+        </p>
+      </div>
+
+      <div class="xl:row-end-3	col-span-2">
+        <img height="70" width="70" src="/src/img/svg/hamer.svg" alt="" />
+        <HeadingThree h3="Realizacja" />
+        <p>
+          Po wykonaniu mebli, zamontujemy je na miejscu pozostawiając po sobie
+          wnętrze doskonałe.
+        </p>
+      </div>
+    </div>
+
+    <span class="hidden xl:block absolute font-black text-6xl text-main right-0 top-0">
+      <img src="/src/img/svg/question.svg" alt="?" />
+    </span>
+  </div>
+</Section>

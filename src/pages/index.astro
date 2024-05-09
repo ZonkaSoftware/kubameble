@@ -1,0 +1,30 @@
+---
+import HowWeWork from "../components/HowWeWork.astro";
+import { SwipeCarousel } from "../components/SwipeCarousel";
+import Navigation from "../components/ui/Navigation.astro";
+import Layout from "../layouts/Layout.astro";
+import { StaggerTestimonials } from "../components/Opinions";
+import Info from "../components/Info.astro";
+import Contact from "../components/Contact.astro";
+---
+
+<Layout title="Kuba Meble">
+  <div
+    class="relative md:h-screen md:flex md:flex-col md:justify-center overflow-hidden"
+  >
+    <Navigation />
+    <SwipeCarousel client:load />
+    <span class="absolute bottom-0 left-0 -z-10 hidden xl:block"
+      ><img src="/src/img/svg/line1.svg" alt="" /></span
+    >
+    <span class="absolute top-0 right-0 -z-10 hidden xl:block"
+      ><img src="/src/img/svg/line2.svg" alt="" /></span
+    >
+  </div>
+  <main>
+    <HowWeWork />
+    <StaggerTestimonials client:load/>
+    <Info/>
+    <Contact/>
+  </main>
+</Layout>

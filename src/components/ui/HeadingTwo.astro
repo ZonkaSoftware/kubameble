@@ -1,0 +1,10 @@
+---
+interface Props {
+    h2:string;
+    class?:string;
+}
+
+const {h2} = Astro.props;
+const {class} = Astro.props;
+---
+<h2 class=`font-black uppercase text-3xl tracking-wide md:text-4xl xl:text-5xl mb-10  ${Astro.props.class}` set:html={Astro.props.h2}/>

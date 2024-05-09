@@ -1,0 +1,69 @@
+<nav class="fixed top-0 w-full bg-white shadow-md py-2 md:py-4 z-50">
+  <div class="container flex justify-between items-center">
+    <a href="#"
+      ><img
+        src="/src/img/logo.jpg"
+        height="150"
+        width="150"
+        alt="logo kuba meble zrobić ci kuchnię?"
+      /></a
+    >
+
+    <button class="btn md:hidden z-50 font-semibold uppercase tracking-wide"
+      >Menu</button
+    >
+
+    <div
+      class="navLinks font-semibold uppercase tracking-wide fixed top-0 bottom-0 left-0 right-0 text-2xl   bg-white flex flex-col items-center justify-center translate-y-[-150%] ease-in duration-300 overflow-hidden md:duration-0 md:translate-y-0 md:text-lg  md:static md:flex-row"
+    >
+      <a
+        class="px-4 py-2 md:mt-0 mt-10 md:mr-10 hover:text-dark duration-200"
+        href="#">Jak pracujemy</a
+      >
+      <a
+        class="px-4 py-2 mt-10 md:mt-0 md:mr-10 hover:text-dark duration-200"
+        href="#">Realizacje</a
+      >
+      <a class="px-4 py-2 mt-10 md:mt-0 hover:text-dark duration-200" href="#"
+        >Kontakt</a
+      >
+
+      <span class="absolute left-0 right-0 top-0 md:hidden">
+        <img src="/src/img/svg/line1.svg" height="300" width="300" alt="" />
+      </span>
+      <span class="absolute right-0 bottom-[-20%] md:hidden">
+        <img
+          src="/src/img/svg/line2.svg"
+          height="500"
+          width="500"
+          alt=""
+        /></span
+      >
+    </div>
+  </div>
+</nav>
+
+<div class="h-[115px] md:h-[130px]"></div>
+<!-- INVINCIBLE BLOCK -->
+
+<script>
+  import { disablePageScroll, enablePageScroll } from "scroll-lock";
+  const btn = document.querySelector(".btn");
+  const navLinks = document.querySelector(".navLinks");
+
+  const handleNav = () => {
+    if (navLinks.classList.contains("translate-y-[-150%]")) {
+      navLinks.classList.add("translate-y-0");
+      navLinks.classList.remove("translate-y-[-150%]");
+      disablePageScroll();
+      btn.textContent = "Zamknij";
+    } else {
+      navLinks.classList.remove("translate-y-0");
+      navLinks.classList.add("translate-y-[-150%]");
+      enablePageScroll();
+      btn.textContent = "Menu";
+    }
+  };
+
+  btn.addEventListener("click", handleNav);
+</script>
