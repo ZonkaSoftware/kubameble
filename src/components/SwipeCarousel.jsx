@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
+import img1 from "../img/1.jpg"
+import img2 from "../img/2.jpg"
+import img3 from "../img/3.jpg"
 
-const imgs = ["../src/img/1.jpg", "../src/img/2.jpg", "../src/img/3.jpg"];
+
+const imgs = [img1, img2, img3];
 
 const ONE_SECOND = 1000;
 const AUTO_DELAY = ONE_SECOND * 10;
