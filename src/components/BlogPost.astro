@@ -1,0 +1,18 @@
+---
+import HeadingThree from "./ui/HeadingThree.astro";
+
+const { title, url, image } = Astro.props;
+---
+
+<a href={url} class="block w-full group overflow-hidden">
+  <div class="relative w-full" style="padding-top: 100%;">
+    <img
+      src={image}
+      alt={title}
+      class="absolute inset-0 w-full h-full object-cover rounded-md group-hover:transform transition-transform duration-300 ease-in-out group-hover:scale-110"
+    />
+  </div>
+  <div class="mt-4 group-hover:text-main duration-200 ease-in-out">
+    <HeadingThree h3={title} />
+  </div>
+</a>
