@@ -8,7 +8,7 @@ const { frontmatter } = Astro.props;
   </div>
   <h1 class="font-black uppercase text-3xl tracking-wide md:text-4xl xl:text-5xl my-10 text-center">{frontmatter.title}</h1>
   <p class="mb-10">{frontmatter.description}</p>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+  <div class="grid grid-cols-2 md:grid-cols-2 gap-10">
     <slot />
   </div>
 </MainLayout>
