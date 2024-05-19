@@ -1,10 +1,19 @@
 ---
+import { Image } from "astro:assets";
+import logo2 from "../../img/svg/logo2.svg";
 
 ---
 
 <footer class="bg-main">
   <div class="container flex flex-col md:flex-row md:justify-between py-12">
-    <div>Logo</div>
+    <a href="/">
+      <Image
+        src={logo2}
+        height="120"
+        width="120"
+        alt="logo kuba meble zrobić ci kuchnię?"
+      />
+    </a>
     <div class="flex flex-col md:flex-row">
       <ul class="md:mr-20 my-5 md:my-0">
         <li class="font-bold">Prawo</li>

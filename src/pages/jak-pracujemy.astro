@@ -2,13 +2,16 @@
 import Section from "../components/ui/Section.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import HeadingTwo from "../components/ui/HeadingTwo.astro";
+import HeadingThree from "../components/ui/HeadingThree.astro";
 
 import { Image } from "astro:assets";
-import bulb from "../img/svg/bulb.svg";
+import check from "../img/svg/check.svg";
 import measurement from "../img/svg/measurement.svg";
 import project from "../img/svg/project.svg";
 import hamer from "../img/svg/hamer.svg";
-import HeadingThree from "../components/ui/HeadingThree.astro";
+import question from "../img/svg/question.svg";
+import money from "../img/svg/money.svg";
+import contact from "../img/svg/contact.svg";
 ---
 
 <MainLayout>
@@ -18,7 +21,7 @@ import HeadingThree from "../components/ui/HeadingThree.astro";
   
         <div class="grid grid-cols-1 md:grid-cols-2  gap-6">
           <div class="mb-6 lg:mb-0">
-            <Image height="70" width="70" src={bulb} alt="" />
+            <Image height="70" width="70" src={contact} alt="" />
             <HeadingThree h3="1. Kontakt" />
             <p>
                 najważniejsza jest komunikacja, niezależnie czy chcą Państwo zasięgnąć
@@ -30,7 +33,7 @@ import HeadingThree from "../components/ui/HeadingThree.astro";
           </div>
   
           <div class="mb-6 lg:mb-0">
-            <Image height="70" width="70" src={measurement} alt="" />
+            <Image height="70" width="70" src={money} alt="" />
             <HeadingThree h3="2. Wstępna wycena" />
             <p>
                 w następnym kroku, po uzyskaniu podstawowych informacji, jesteśmy
@@ -42,7 +45,7 @@ import HeadingThree from "../components/ui/HeadingThree.astro";
           </div>
   
           <div class="mb-6 lg:mb-0">
-            <Image height="70" width="70" src={project} alt="" />
+            <Image height="70" width="70" src={measurement} alt="" />
             <HeadingThree h3="3. Pomiar i konsultacja" />
             <p>
                 jeżeli wstępnie akceptujecie Państwo warunki współpracy
@@ -57,7 +60,7 @@ import HeadingThree from "../components/ui/HeadingThree.astro";
           </div>
   
           <div class="mb-6 lg:mb-0">
-            <Image height="70" width="70" src={hamer} alt="" />
+            <Image height="70" width="70" src={project} alt="" />
             <HeadingThree h3="4. Oferta" />
             <p>
                 kolejnym krokiem po dokonaniu pomiarów i konsultacji z Państwem przygotujemy
@@ -68,7 +71,7 @@ import HeadingThree from "../components/ui/HeadingThree.astro";
           </div>
   
           <div class="mb-6 lg:mb-0">
-            <Image height="70" width="70" src={hamer} alt="" />
+            <Image height="70" width="70" src={check} alt="" />
             <HeadingThree h3="5. Zatwierdzenie oferty" />
             <p>
                 ostatnim krokiem dzielącym nas od montażu jest zawarcie z
@@ -80,7 +83,7 @@ import HeadingThree from "../components/ui/HeadingThree.astro";
   
           <div class="mb-6 lg:mb-0">
             <Image height="70" width="70" src={hamer} alt="" />
-            <HeadingThree h3="6. Montaż" />
+            <HeadingThree h3="6.Montaż" />
             <p>
                 w ostatnim kroku po dokonaniu wszelkich formalności przechodzimy do
                 realizacji Państwa zamówienia zgodnie z terminem uwzględnionym w umowie. Z uwagi

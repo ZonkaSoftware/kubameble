@@ -4,11 +4,11 @@ import HeadingThree from "./ui/HeadingThree.astro";
 import Section from "./ui/Section.astro";
 
 import { Image } from "astro:assets";
-import bulb from "../img/svg/bulb.svg";
 import measurement from "../img/svg/measurement.svg";
 import project from "../img/svg/project.svg";
-import hamer from "../img/svg/hamer.svg";
 import question from "../img/svg/question.svg";
+import money from "../img/svg/money.svg";
+import contact from "../img/svg/contact.svg";
 ---
 
 <Section id="jakpracujemy">
@@ -19,7 +19,7 @@ import question from "../img/svg/question.svg";
       <div
         class="md:row-end-2 md:col-span-3 lg:col-span-2 mb-6 md:mr-10 md:mb-10"
       >
-        <Image height="70" width="70" src={bulb} alt="" />
+        <Image height="70" width="70" src={contact} alt="" />
         <HeadingThree h3="Kontakt" />
         <p>
           Skontaktuj się z nami przez telefon, SMS, WhatsApp, media
@@ -29,7 +29,7 @@ import question from "../img/svg/question.svg";
       </div>
 
       <div class="md:row-end-2 md:col-span-3 lg:col-span-2 mb-6 md:mb-10">
-        <Image height="70" width="70" src={measurement} alt="" />
+        <Image height="70" width="70" src={money} alt="" />
         <HeadingThree h3="Wstępna wycena" />
         <p>
           Po uzyskaniu podstawowych informacji, przygotujemy wstępną wycenę.
@@ -41,7 +41,7 @@ import question from "../img/svg/question.svg";
       <div
         class="md:row-end-3 md:col-span-3 lg:col-span-2 mb-6 md:mb-0 md:mr-10"
       >
-        <Image height="70" width="70" src={project} alt="" />
+        <Image height="70" width="70" src={measurement} alt="" />
         <HeadingThree h3="Pomiar i konsultacja" />
         <p>
           Po akceptacji wstępnej wyceny, umówimy się na pomiary i wybór
@@ -51,7 +51,7 @@ import question from "../img/svg/question.svg";
       </div>
 
       <div class="md:row-end-3 md:col-span-3 lg:col-span-2">
-        <Image height="70" width="70" src={hamer} alt="" />
+        <Image height="70" width="70" src={project} alt="" />
         <HeadingThree h3="Oferta" />
         <p>
           Po pomiarach i konsultacji przygotujemy szczegółową wycenę końcową z
