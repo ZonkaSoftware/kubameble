@@ -4,12 +4,11 @@ import HeadingThree from "./ui/HeadingThree.astro";
 import Section from "./ui/Section.astro";
 
 import { Image } from "astro:assets";
-import bulb from "../img/svg/bulb.svg"
-import measurement from "../img/svg/measurement.svg"
-import project from "../img/svg/project.svg"
-import hamer from "../img/svg/hamer.svg"
-import question from "../img/svg/question.svg"
-
+import bulb from "../img/svg/bulb.svg";
+import measurement from "../img/svg/measurement.svg";
+import project from "../img/svg/project.svg";
+import hamer from "../img/svg/hamer.svg";
+import question from "../img/svg/question.svg";
 ---
 
 <Section id="jakpracujemy">
@@ -17,44 +16,60 @@ import question from "../img/svg/question.svg"
     <HeadingTwo h2="Jak pracujemy" />
 
     <div class="grid grid-rows-4 grid-cols-1 md:grid-cols-6 md:grid-rows-2">
-      <div class="md:row-end-2 md:col-span-3 lg:col-span-2 mb-6 md:mr-10 md:mb-10">
+      <div
+        class="md:row-end-2 md:col-span-3 lg:col-span-2 mb-6 md:mr-10 md:mb-10"
+      >
         <Image height="70" width="70" src={bulb} alt="" />
         <HeadingThree h3="Kontakt" />
         <p>
-          Najważniejszy jest pomysł. Jeśli masz koncepcję, powiedz nam o niej.
-          Jeśli nie, zdaj się na nasze doświadczenie.
+          Skontaktuj się z nami przez telefon, SMS, WhatsApp, media
+          społecznościowe lub formularz na stronie. Konsultacja i wycena są
+          bezpłatne!
         </p>
       </div>
 
       <div class="md:row-end-2 md:col-span-3 lg:col-span-2 mb-6 md:mb-10">
         <Image height="70" width="70" src={measurement} alt="" />
-        <HeadingThree h3="Pomiar" />
+        <HeadingThree h3="Wstępna wycena" />
         <p>
-          Ocenimy jakie rozwiązania najlepiej sprawdzą się w aranżowanych
-          wnętrzach, proponując Ci te najbardziej dopasowane do Twoich potrzeb.
+          Po uzyskaniu podstawowych informacji, przygotujemy wstępną wycenę.
+          Posiadanie projektu lub odręcznego rysunku pomieszczenia ułatwi
+          wycenę.
         </p>
       </div>
 
-      <div class="md:row-end-3	md:col-span-3 lg:col-span-2 mb-6 md:mb-0 md:mr-10">
+      <div
+        class="md:row-end-3 md:col-span-3 lg:col-span-2 mb-6 md:mb-0 md:mr-10"
+      >
         <Image height="70" width="70" src={project} alt="" />
-        <HeadingThree h3="Projekt" />
+        <HeadingThree h3="Pomiar i konsultacja" />
         <p>
-          Przedstawimy Ci nasz projekt, nad którym bedziemy pracowali dalej
-          wspólnie. Wybierzesz materiały, kolory i wykończenia.
+          Po akceptacji wstępnej wyceny, umówimy się na pomiary i wybór
+          materiałów. Przygotujemy projekt z wizualizacją 3D, a także
+          fotorealistyczną wizualizację, jeśli Państwo sobie życzą.
         </p>
       </div>
 
-      <div class="md:row-end-3	md:col-span-3 lg:col-span-2">
+      <div class="md:row-end-3 md:col-span-3 lg:col-span-2">
         <Image height="70" width="70" src={hamer} alt="" />
-        <HeadingThree h3="Realizacja" />
+        <HeadingThree h3="Oferta" />
         <p>
-          Po wykonaniu mebli, zamontujemy je na miejscu pozostawiając po sobie
-          wnętrze doskonałe.
+          Po pomiarach i konsultacji przygotujemy szczegółową wycenę końcową z
+          wykazem użytych materiałów. Przekażemy ją do akceptacji i ewentualnych
+          zmian.
         </p>
       </div>
     </div>
 
-    <span class="hidden lg:block absolute font-black text-6xl text-main right-0 top-0 -z-10">
+    <a
+      href="jak-pracujemy"
+      class="bg-main px-6 py-4 rounded-md border-2 border-second w-full block text-center cursor-pointer md:w-auto md:inline-block hover:bg-white transition-all duration-200 md:mt-10"
+      >Czytaj Całość</a
+    >
+
+    <span
+      class="hidden lg:block absolute font-black text-6xl text-main right-0 top-0 -z-10"
+    >
       <Image src={question} alt="?" />
     </span>
   </div>

@@ -1,0 +1,95 @@
+---
+import Section from "../components/ui/Section.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import HeadingTwo from "../components/ui/HeadingTwo.astro";
+
+import { Image } from "astro:assets";
+import bulb from "../img/svg/bulb.svg";
+import measurement from "../img/svg/measurement.svg";
+import project from "../img/svg/project.svg";
+import hamer from "../img/svg/hamer.svg";
+import HeadingThree from "../components/ui/HeadingThree.astro";
+---
+
+<MainLayout>
+    <Section id="jakpracujemy">
+      <div class="relative container">
+        <HeadingTwo h2="Jak pracujemy" />
+  
+        <div class="grid grid-cols-1 md:grid-cols-2  gap-6">
+          <div class="mb-6 lg:mb-0">
+            <Image height="70" width="70" src={bulb} alt="" />
+            <HeadingThree h3="1. Kontakt" />
+            <p>
+                najważniejsza jest komunikacja, niezależnie czy chcą Państwo zasięgnąć
+                informacji na temat swojej wymarzonej zabudowy meblowej za pomocą rozmowy
+                telefonicznej, wiadomości sms bądź WhatsApp, portalu społecznościowego, czy chociażby
+                przez formularz dostępny na naszej stronie, ważne żebyś nie bali się Państwo skontaktować
+                z nami ponieważ konsultacja jak i wycena są zupełnie bezpłatne!
+            </p>
+          </div>
+  
+          <div class="mb-6 lg:mb-0">
+            <Image height="70" width="70" src={measurement} alt="" />
+            <HeadingThree h3="2. Wstępna wycena" />
+            <p>
+                w następnym kroku, po uzyskaniu podstawowych informacji, jesteśmy
+                w stanie zrobić dla Państwa wstępną wycenę prognozującą kwotę wymarzonej zabudowy.
+                Dużą zaletą jest posiadanie przez Państwa projektu lub rzutu budowlanego pomieszczenia,
+                które będziemy wyposażać w nasze produkty. Jeżeli nie posiadacie Państwo projektu to dla
+                nas żaden problem. Wystarczy odręczny rysunek poglądowy na kartce papieru!
+            </p>
+          </div>
+  
+          <div class="mb-6 lg:mb-0">
+            <Image height="70" width="70" src={project} alt="" />
+            <HeadingThree h3="3. Pomiar i konsultacja" />
+            <p>
+                jeżeli wstępnie akceptujecie Państwo warunki współpracy
+                oraz wstępną wycenę, umawiamy się na spotkanie, na którym dokonamy niezbędnych
+                pomiarów potrzebnych do produkcji Państwa mebli. Podczas naszej wizyty będziecie mogli
+                Państwo wybrać materiały wykończeniowe takie jak: korpusy, blaty, fronty, uchwyty
+                oraz okucia wewnętrze. Po przedmiotowym spotkaniu, przygotujemy dla Państwa projekt
+                wraz z poglądową roboczą wizualizacją 3d zabudowy. Ponadto jeżeli macie Państwo ochotę
+                to dodatkowo możemy wykonać także fotorealistyczną wizualizacje, która pozwala zobaczyć
+                finalny efekt zabudowy na etapie projektu.
+            </p>
+          </div>
+  
+          <div class="mb-6 lg:mb-0">
+            <Image height="70" width="70" src={hamer} alt="" />
+            <HeadingThree h3="4. Oferta" />
+            <p>
+                kolejnym krokiem po dokonaniu pomiarów i konsultacji z Państwem przygotujemy
+                szczegółową wycenę końcową z wykazem użytych materiałów potrzebnych do produkcji
+                Państwa mebli. Następnie przekazujemy ją Państwu do akceptacji i ewentualnych drobnych
+                zmian.
+            </p>
+          </div>
+  
+          <div class="mb-6 lg:mb-0">
+            <Image height="70" width="70" src={hamer} alt="" />
+            <HeadingThree h3="5. Zatwierdzenie oferty" />
+            <p>
+                ostatnim krokiem dzielącym nas od montażu jest zawarcie z
+                Państwem umowy na wykonanie towaru zgodnie z zatwierdzoną ofertą. Należy pamiętać że
+                od podpisania umowy do samego montażu dzieli nas czas w długości co najmniej 6 tygodni
+                ze względu na terminy obowiązujące u różnych producentów niezbędnych materiałów.
+            </p>
+          </div>
+  
+          <div class="mb-6 lg:mb-0">
+            <Image height="70" width="70" src={hamer} alt="" />
+            <HeadingThree h3="6. Montaż" />
+            <p>
+                w ostatnim kroku po dokonaniu wszelkich formalności przechodzimy do
+                realizacji Państwa zamówienia zgodnie z terminem uwzględnionym w umowie. Z uwagi
+                na obowiązujące terminy nie zwlekaj i skontaktuj się z nami w celu wykonania przez
+                nas Twojej wymarzonej zabudowy meblowej!
+            </p>
+          </div>
+        </div>
+  
+      </div>
+    </Section>
+  </MainLayout>
