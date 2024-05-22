@@ -39,6 +39,7 @@ export default config({
       label: "Banners",
       slugField: "title",
       path: "src/content/banners/*",
+      format: { contentField: "description" },
       schema: {
         title: fields.slug({ name: { label: "Title" } }),
         bannerImage: fields.image({
@@ -46,7 +47,13 @@ export default config({
           directory: "public/images/banners",
           publicPath: "/images/banners",
         }),
-        date: fields.date({ label: "Date", defaultValue: "today" }),
+        description: fields.document({
+          label: "Content",
+          formatting: true,
+          dividers: true,
+          links: true,
+          images: true,
+        }),
       },
     },
   },
