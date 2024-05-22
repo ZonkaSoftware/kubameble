@@ -3,19 +3,19 @@ import HeadingTwo from "./ui/HeadingTwo.astro";
 import Section from "./ui/Section.astro";
 
 import { Image } from "astro:assets";
-import wave from "../img/svg/wave.svg"
-
+import wave from "../img/svg/wave.svg";
 ---
 
 <Section>
   <div class="relative container flex flex-col items-center">
     <HeadingTwo class="text-center mb-5" h2="Tworzenie to <br/> nasza pasja" />
-    <span class="mt-auto"><Image class="mx-auto w-4/5" src={wave}  alt="" /></span>
-    <p class="text-center mt-7 ">
-      Chcemy, aby nasze meble służyły Ci przez długie lata! Dlatego projektujemy
-      je z dbałością o najmniejsze szczegóły, przykładamy wagę do materiałów, z
-      których je wykonujemy, pracujemy wytrwale nad ich niezawodnością i
-      ergonomią.
+    <span class="mt-auto"
+      ><Image class="mx-auto w-4/5" src={wave} alt="" /></span
+    >
+    <p class="text-center mt-7">
+      Tworzymy meble z pasją od pokoleń, do każdej realizacji podchodzimy
+      indywidualnie, zamienimy Twój pomysł w cudowny projekt i wykonamy go z
+      największą starannością i funkcjonalnością.
     </p>
   </div>
 </Section>

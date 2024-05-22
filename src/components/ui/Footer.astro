@@ -1,7 +1,6 @@
 ---
 import { Image } from "astro:assets";
 import logo2 from "../../img/svg/logo2.svg";
-
 ---
 
 <footer class="bg-main">
@@ -9,22 +8,29 @@ import logo2 from "../../img/svg/logo2.svg";
     <a href="/">
       <Image
         src={logo2}
-        height="120"
-        width="120"
+        height="170"
+        width="170"
         alt="logo kuba meble zrobić ci kuchnię?"
       />
     </a>
     <div class="flex flex-col md:flex-row">
-      <ul class="md:mr-20 my-5 md:my-0">
+      <ul class="md:mr-20 my-5 md:my-0 space-y-2">
         <li class="font-bold">Prawo</li>
-        <li><a class="hover:underline" href="/polityka-prywatnosci">Polityka prywatności</a></li>
-        <li><a class="hover:underline" href="/polityka-cookie">Polityka cookie</a></li>
+        <li>
+          <a class="hover:underline" href="/privacy"
+            >Polityka prywatności</a>
+        </li>
+        <li>
+          <a class="hover:underline" href="/cookies">Polityka cookie</a>
+        </li>
       </ul>
-      <ul>
+      <ul class="space-y-2">
         <li class="font-bold">Podstrony</li>
-        <li><a class="hover:underline" href="/#jakpracujemy">Jak pracujemy</a></li>
-        <li><a class="hover:underline" href="/realizacje">Realizacje</a></li>
-        <li><a class="hover:underline" href="/#kontakt">Kontakt</a></li>
+        <li>
+          <a class="hover:underline" href="/#how-we-work">Jak pracujemy</a>
+        </li>
+        <li><a class="hover:underline" href="/realizations">Realizacje</a></li>
+        <li><a class="hover:underline" href="/#contact">Kontakt</a></li>
       </ul>
     </div>
   </div>
@@ -36,8 +42,28 @@ import logo2 from "../../img/svg/logo2.svg";
         © <span class="year"></span> KUBA MEBLE <span class="block md:hidden"
         ></span> Wszelkie prawa zastrzeżone.
       </p>
-      <a href="https://zonka.software" target="_blank" class="uppercase font-black tracking-widest"
-        >zonka</a
+      <a
+        href="https://zonka.software"
+        target="_blank"
+        class="uppercase font-black tracking-widest"
+        ><svg
+          width="83"
+          height="13"
+          viewBox="0 0 83 13"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#clip0_60_162)">
+            <path
+              d="M4.47877 9.53479H9.28325V12.4801H0.317139V9.70119L5.05395 3.62759H0.317139V0.698948H9.28325V3.47783L4.47877 9.53479ZM21.8846 12.5965C20.7568 12.5965 19.7192 12.3359 18.7718 11.8145C17.8357 11.2931 17.0914 10.572 16.5388 9.65127C15.9861 8.7305 15.7098 7.69331 15.7098 6.53959C15.7098 5.38586 15.9861 4.34866 16.5388 3.42791C17.0914 2.50716 17.8357 1.79164 18.7718 1.28135C19.7192 0.75996 20.7568 0.499268 21.8846 0.499268C23.0124 0.499268 24.0444 0.75996 24.9805 1.28135C25.9165 1.79164 26.6553 2.50716 27.1966 3.42791C27.7492 4.34866 28.0256 5.38586 28.0256 6.53959C28.0256 7.69331 27.7492 8.7305 27.1966 9.65127C26.6553 10.572 25.9109 11.2931 24.9635 11.8145C24.0274 12.3359 23.0011 12.5965 21.8846 12.5965ZM21.8846 9.15207C22.629 9.15207 23.2042 8.91911 23.6102 8.45319C24.0162 7.97619 24.2192 7.33831 24.2192 6.53959C24.2192 5.72979 24.0162 5.09191 23.6102 4.62599C23.2042 4.14898 22.629 3.91047 21.8846 3.91047C21.1289 3.91047 20.5482 4.14898 20.1421 4.62599C19.7361 5.09191 19.5331 5.72979 19.5331 6.53959C19.5331 7.33831 19.7361 7.97619 20.1421 8.45319C20.5482 8.91911 21.1289 9.15207 21.8846 9.15207ZM45.9423 12.4801H42.1867L38.2111 6.55623V12.4801H34.4555V0.698948H38.2111L42.1867 6.72263V0.698948H45.9423V12.4801ZM59.955 12.4801L56.4701 7.37159V12.4801H52.7142V0.698948H56.4701V5.65767L59.9043 0.698948H64.1505L60.0227 6.33991L64.4212 12.4801H59.955ZM78.2404 10.6996H74.2479L73.6558 12.4801H69.7141L74.0957 0.698948H78.4265L82.7911 12.4801H78.8325L78.2404 10.6996ZM77.3269 7.92071L76.2442 4.64263L75.1615 7.92071H77.3269Z"
+              fill="#2B2A28"></path>
+          </g>
+          <defs>
+            <clipPath id="clip0_60_162">
+              <rect width="83" height="13" fill="white"></rect>
+            </clipPath>
+          </defs>
+        </svg></a
       >
     </div>
   </div>

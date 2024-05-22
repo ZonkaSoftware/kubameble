@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
-import img1 from "../img/1.jpg"
-import img2 from "../img/2.jpg"
-import img3 from "../img/3.jpg"
-
-
-const imgs = [img1, img2, img3];
+// import img3 from "../img/3.jpg"
 
 const ONE_SECOND = 1000;
 const AUTO_DELAY = ONE_SECOND * 10;
@@ -18,9 +13,11 @@ const SPRING_OPTIONS = {
   damping: 50,
 };
 
-export const SwipeCarousel = () => {
+export const SwipeCarousel = ({ banners }) => {
   const [imgIndex, setImgIndex] = useState(0);
   const dragX = useMotionValue(0);
+
+  const imgs = banners;
 
   useEffect(() => {
     const intervalRef = setInterval(() => {
@@ -68,23 +65,23 @@ export const SwipeCarousel = () => {
           onDragEnd={onDragEnd}
           className="flex cursor-grab items-center active:cursor-grabbing"
         >
-          <Images imgIndex={imgIndex} />
+          <Images imgs={imgs} imgIndex={imgIndex} />
         </motion.div>
 
-        <Dots imgIndex={imgIndex} setImgIndex={setImgIndex} />
+        <Dots imgIndex={imgIndex} imgs={imgs} setImgIndex={setImgIndex} />
       </div>
     </header>
   );
 };
 
-const Images = ({ imgIndex }) => {
+const Images = ({ imgIndex, imgs }) => {
   return (
     <>
       {imgs.map((imgSrc, idx) => {
         return (
           <motion.img
             key={idx}
-            src={imgSrc.src}
+            src={imgSrc}
             animate={{
               scale: imgIndex === idx ? 1 : 0.9,
             }}
@@ -97,7 +94,7 @@ const Images = ({ imgIndex }) => {
   );
 };
 
-const Dots = ({ imgIndex, setImgIndex }) => {
+const Dots = ({ imgIndex, imgs, setImgIndex }) => {
   return (
     <div className="mt-4 flex w-full justify-end gap-4">
       {imgs.map((_, idx) => {

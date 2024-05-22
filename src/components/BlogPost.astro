@@ -4,10 +4,10 @@ import HeadingThree from "./ui/HeadingThree.astro";
 
 // import image from "../../src/img/1.jpg"
 
-const { title, url, image} = Astro.props;
+const { title, url, image } = Astro.props;
 ---
 
-<a href={url} class="block w-full group overflow-hidden">
+<a href={`/realizations/${url}`} class="block w-full group overflow-hidden">
   <div class="relative w-full" style="padding-top: 100%;">
     <img
       src={image}

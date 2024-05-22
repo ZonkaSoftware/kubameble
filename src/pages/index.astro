@@ -10,6 +10,11 @@ import Contact from "../components/Contact.astro";
 import { Image } from "astro:assets";
 import line1 from "../img/svg/line1.svg";
 import line2 from "../img/svg/line2.svg";
+import { getCollection } from "astro:content";
+
+const allBanners = await getCollection("banners");
+//@ts-ignore
+const banners = allBanners.map((banner) => banner.data.bannerImage)
 ---
 
 <Layout title="Kuba Meble">
@@ -17,7 +22,7 @@ import line2 from "../img/svg/line2.svg";
     class="relative md:h-screen md:flex md:flex-col md:justify-center overflow-hidden"
   >
     <Navigation />
-    <SwipeCarousel client:load />
+    <SwipeCarousel banners={banners} client:load />
     <span class="absolute bottom-0 left-0 -z-10 hidden lg:block"
       ><Image src={line1} alt="" /></span
     >

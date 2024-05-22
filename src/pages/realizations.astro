@@ -1,9 +1,11 @@
 ---
+import { getCollection } from "astro:content";
 import BlogPost from "../components/BlogPost.astro";
 import HeadingTwo from "../components/ui/HeadingTwo.astro";
 import Section from "../components/ui/Section.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-const allPosts = await Astro.glob("../pages/blog/*.md");
+
+const allPosts = await getCollection("realizations");
 ---
 <MainLayout title="Kuba Meble - Realizacje">
   <Section>
@@ -13,9 +15,9 @@ const allPosts = await Astro.glob("../pages/blog/*.md");
       {
         allPosts.map((post) => (
           <BlogPost
-            url={post.url}
-            title={post.frontmatter.title}
-            image={post.frontmatter.image.url}
+            url={post.slug}
+            title={post.data.title}
+            image={post.data.mainImage}
           />
         ))
       }

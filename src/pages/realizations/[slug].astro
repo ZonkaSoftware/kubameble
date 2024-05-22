@@ -1,0 +1,36 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import MainLayout from "../../layouts/MainLayout.astro";
+
+const { slug } = Astro.params;
+if (!slug) throw new Error("Slug not found");
+const post = await getEntry("realizations", slug);
+
+if (!post) throw new Error("No post found for this slug");
+const { Content } = await post.render();
+
+// Generate static pages
+export async function getStaticPaths() {
+  const posts = await getCollection("realizations");
+  return posts.map((post) => ({ params: { slug: post.slug } }));
+}
+---
+
+<MainLayout title={post.data.title}>
+  <div class="relative overflow-hidden" style="height: 400px;">
+    <img
+      src={post.data.mainImage}
+      class="absolute inset-0 w-full h-full object-cover my-10"
+      alt="Głowne zdjęcie"
+    />
+  </div>
+  <h1
+    class="font-black uppercase text-3xl tracking-wide md:text-4xl xl:text-5xl my-10 text-center"
+  >
+    {post.data.title}
+  </h1>
+  <p class="mb-10"><Content /></p>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+    zdjęcia
+  </div>
+</MainLayout>
