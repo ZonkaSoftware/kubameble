@@ -2,11 +2,11 @@ import { config, fields, collection } from "@keystatic/core";
 
 export default config({
   storage: {
-    kind: "local",
+    kind: "cloud",
   },
-  // cloud: {
-  //   project: "zonka-team/kubameble",
-  // },
+  cloud: {
+    project: "zonka-team/kubameble",
+  },
   ui: {
     brand: {
       name: "KUBA MEBLE",
