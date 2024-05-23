@@ -2,11 +2,11 @@ import { config, fields, collection } from "@keystatic/core";
 
 export default config({
   storage: {
-    kind: "cloud",
+    kind: "local",
   },
-  cloud: {
-    project: "zonka-team/kubameble",
-  },
+  // cloud: {
+  //   project: "zonka-team/kubameble",
+  // },
   ui: {
     brand: {
       name: "KUBA MEBLE",
@@ -32,6 +32,13 @@ export default config({
           directory: "public/images/realizations",
           publicPath: "/images/realizations",
         }),
+        images: fields.array(
+          fields.image({
+            label: "Images",
+            directory: "public/images/realizations",
+            publicPath: "/images/realizations",
+          })
+        ),
         date: fields.date({ label: "Date", defaultValue: "today" }),
       },
     }),

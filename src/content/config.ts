@@ -6,6 +6,7 @@ const realizations = defineCollection({
   schema: z.object({
     title: z.string(),
     mainImage: z.string(),
+    images: z.array(z.string()),
     date: z.date(),
   }),
 });
