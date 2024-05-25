@@ -5,7 +5,7 @@ export default config({
     kind: "cloud",
   },
   cloud: {
-    project: "kubameble/kubameble-site",
+    project: "kubameble/kubameble-strona",
   },
   ui: {
     brand: {

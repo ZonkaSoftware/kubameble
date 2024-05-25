@@ -3,10 +3,10 @@ import HeadingTwo from "./ui/HeadingTwo.astro";
 import Section from "./ui/Section.astro";
 
 import { Image } from "astro:assets";
-import phone from "../img/svg/phone.svg"
-import mail from "../img/svg/mail.svg"
-import location from "../img/svg/location.svg"
-import nip from "../img/svg/nip.svg"
+import phone from "../img/svg/phone.svg";
+import mail from "../img/svg/mail.svg";
+import location from "../img/svg/location.svg";
+import nip from "../img/svg/nip.svg";
 ---
 
 <Section id="contact">
@@ -18,7 +18,8 @@ import nip from "../img/svg/nip.svg"
           <Image src={phone} alt="" />
           <div class="flex flex-col justify-center ml-4">
             <h4 class="font-black text-main">Telefon</h4>
-            <a class="font-bold text-xl md:text-2xl" href="#">+48 736 406 807</a>
+            <a class="font-bold text-xl md:text-2xl" href="#">+48 736 406 807</a
+            >
           </div>
         </div>
 
@@ -26,7 +27,9 @@ import nip from "../img/svg/nip.svg"
           <Image src={mail} alt="" />
           <div class="flex flex-col justify-center ml-4">
             <h4 class="font-black text-main">Email</h4>
-            <a class="font-bold text-xl md:text-2xl" href="#">plewameble@gmail.com</a>
+            <a class="font-bold text-xl md:text-2xl" href="#"
+              >plewameble@gmail.com</a
+            >
           </div>
         </div>
 
@@ -49,30 +52,43 @@ import nip from "../img/svg/nip.svg"
         </div>
       </div>
       <div class="w-full lg:w-1/2">
-        <form class="flex flex-col">
+        <form
+          class="flex flex-col"
+          action="https://formsubmit.co/plewameble@gmail.com"
+          method="POST"
+        >
           <input
             class="bg-main border-2 border-second rounded-md placeholder-second px-4 py-2 mb-6 focus:outline-none focus:ring focus:ring-main"
             type="text"
-            placeholder="Imię"
+            required
+            name="Imię"
+            placeholder="Imię *"
           />
           <input
             class="bg-main border-2 border-second rounded-md placeholder-second px-4 py-2 mb-6 focus:outline-none focus:ring focus:ring-main"
             type="text"
-            placeholder="Nazwisko"
+            name="Nazwisko"
+            placeholder="Nazwisko *"
+            required
           />
           <input
             class="bg-main border-2 border-second rounded-md placeholder-second px-4 py-2 mb-6 focus:outline-none focus:ring focus:ring-main"
             type="text"
+            name="Numer telefonu"
             placeholder="Numer telefonu"
           />
           <input
             class="bg-main border-2 border-second rounded-md placeholder-second px-4 py-2 mb-6 focus:outline-none focus:ring focus:ring-main"
             type="email"
-            placeholder="Email"
+            required
+            name="Email"
+            placeholder="Email *"
           />
           <textarea
             class="bg-main border-2 border-second rounded-md placeholder-second px-4 py-2 mb-6 focus:outline-none focus:ring focus:ring-main"
-            placeholder="Wiadomość"></textarea>
+            placeholder="Wiadomość *"
+            name="Wiadomość"
+            required></textarea>
           <input
             class="bg-main border-2 border-second rounded-md placeholder-second px-4 py-2 w-min self-end cursor-pointer mb-10 md:mb-0 hover:"
             type="submit"
@@ -81,6 +97,5 @@ import nip from "../img/svg/nip.svg"
         </form>
       </div>
     </div>
-    
   </div>
 </Section>
