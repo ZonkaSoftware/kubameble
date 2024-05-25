@@ -71,6 +71,14 @@ export const StaggerTestimonials = ({ opinions }) => {
     return () => window.removeEventListener("resize", handleSetCardSize);
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleMove(1);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  });
+
   return (
     <section>
       <div
@@ -125,7 +133,7 @@ const TestimonialCard = ({ position, testimonial, handleMove, cardSize }) => {
       initial={false}
       onClick={() => handleMove(position)}
       className={`
-      absolute left-1/2 top-1/2 cursor-pointer border-second p-8 text-second transition-colors duration-500 ${
+      absolute left-1/2 top-1/2 cursor-pointer border-second px-8 text-second transition-colors duration-500 ${
         isActive ? "z-10 bg-main" : "z-0 bg-white"
       }
       `}
@@ -161,7 +169,7 @@ const TestimonialCard = ({ position, testimonial, handleMove, cardSize }) => {
       />
       <div className="mb-4 h-14 w-12  " />
       <h3
-        className={`text-base sm:text-xl ${
+        className={`text-xs sm:text-base ${
           isActive ? "text-second" : "text-second"
         }`}
       >
@@ -177,75 +185,3 @@ const TestimonialCard = ({ position, testimonial, handleMove, cardSize }) => {
     </motion.div>
   );
 };
-
-const TESTIMONIAL_DATA = [
-  {
-    tempId: 0,
-    testimonial:
-      "My favorite solution in the market. We work 5x faster with COMPANY.",
-    by: "Alex, CEO at COMPANY",
-  },
-  {
-    tempId: 1,
-    testimonial:
-      "I'm confident my data is safe with COMPANY. I can't say that about other providers.",
-    by: "Dan, CEO at COMPANY",
-  },
-  {
-    tempId: 2,
-    testimonial:
-      "I know it's cliche, but we were lost before we found COMPANY. Can't thank you guys enough!",
-    by: "Stephanie, CEO at COMPANY",
-  },
-  {
-    tempId: 3,
-    testimonial:
-      "COMPANY's products make planning for the future seamless. Can't recommend them enough!",
-    by: "Marie, CEO at COMPANY",
-  },
-  {
-    tempId: 4,
-    testimonial: "If I could give 11 stars, I'd give 12.",
-    by: "Andre, CEO at COMPANY",
-  },
-  {
-    tempId: 5,
-    testimonial:
-      "SO SO SO HAPPY WE FOUND YOU GUYS!!!! I'd bet you've saved me 100 hours so far.",
-    by: "Jeremy, CEO at COMPANY",
-  },
-  {
-    tempId: 6,
-    testimonial:
-      "Took some convincing, but now that we're on COMPANY, we're never going back.",
-    by: "Pam, CEO at COMPANY",
-  },
-  {
-    tempId: 7,
-    testimonial:
-      "I would be lost without COMPANY's in depth analytics. The ROI is EASILY 100X for us.",
-    by: "Daniel, CEO at COMPANY",
-  },
-  {
-    tempId: 8,
-    testimonial: "It's just the best. Period.",
-    by: "Fernando, CEO at COMPANY",
-  },
-  {
-    tempId: 9,
-    testimonial: "I switched 5 years ago and never looked back.",
-    by: "Andy, CEO at COMPANY",
-  },
-  {
-    tempId: 10,
-    testimonial:
-      "I've been searching for a solution like COMPANY for YEARS. So glad I finally found one!",
-    by: "Pete, CEO at COMPANY",
-  },
-  {
-    tempId: 11,
-    testimonial:
-      "It's so simple and intuitive, we got the team up to speed in 10 minutes.",
-    by: "Marina, CEO at COMPANY",
-  },
-];
