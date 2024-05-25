@@ -34,7 +34,7 @@ export const SwipeCarousel = ({ banners }) => {
     }, AUTO_DELAY);
 
     return () => clearInterval(intervalRef);
-  }, []);
+  }, [imgIndex]);
 
   const onDragEnd = () => {
     const x = dragX.get();

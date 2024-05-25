@@ -2,11 +2,20 @@
 import MainLayout from "../layouts/MainLayout.astro";
 const { frontmatter } = Astro.props;
 ---
+
 <MainLayout pageTitle={frontmatter.title}>
   <div class="relative overflow-hidden" style="height: 400px;">
-    <img src={frontmatter.image.url} class="absolute inset-0 w-full h-full object-cover my-10" alt={frontmatter.image.alt} />
+    <img
+      src={frontmatter.image.url}
+      class="absolute inset-0 w-full h-full object-cover my-10"
+      alt={frontmatter.image.alt}
+    />
   </div>
-  <h1 class="font-black uppercase text-3xl tracking-wide md:text-4xl xl:text-5xl my-10 text-center">{frontmatter.title}</h1>
+  <h1
+    class="font-black uppercase text-3xl tracking-wide md:text-4xl xl:text-5xl my-10 text-center"
+  >
+    {frontmatter.title}
+  </h1>
   <p class="mb-10">{frontmatter.description}</p>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
     <slot />

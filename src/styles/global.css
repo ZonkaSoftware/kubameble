@@ -1,23 +1,23 @@
 @font-face {
   font-family: "poppins-mid";
-  src: url("/public/fonts/Poppins-Medium.ttf") format("woff");
+  src: url("/src/assets/fonts/Poppins-Medium.ttf") format("tff");
   font-display: swap;
 }
 
 @font-face {
   font-family: "poppins-bold";
-  src: url("/public/fonts/Poppins-Bold.ttf") format("woff");
+  src: url("/src/assets/fonts/Poppins-Bold.ttf") format("tff");
   font-display: swap;
 }
 
 @font-face {
   font-family: "poppins-semibold";
-  src: url("/public/fonts/Poppins-SemiBold.ttf") format("woff");
+  src: url("/src/assets/fonts/Poppins-SemiBold.ttf") format("tff");
   font-display: swap;
 }
 @font-face {
   font-family: "poppins-black";
-  src: url("/public/fonts/Poppins-Black.ttf") format("woff");
+  src: url("/src/assets/fonts/Poppins-Black.ttf") format("tff");
   font-display: swap;
 }
 

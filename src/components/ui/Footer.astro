@@ -17,8 +17,7 @@ import logo2 from "../../img/svg/logo2.svg";
       <ul class="md:mr-20 my-5 md:my-0 space-y-2">
         <li class="font-bold">Prawo</li>
         <li>
-          <a class="hover:underline" href="/privacy"
-            >Polityka prywatności</a>
+          <a class="hover:underline" href="/privacy">Polityka prywatności</a>
         </li>
         <li>
           <a class="hover:underline" href="/cookies">Polityka cookie</a>
@@ -38,10 +37,10 @@ import logo2 from "../../img/svg/logo2.svg";
     <div
       class="container flex flexc-cols md:flex-row justify-between py-12 md:items-center"
     >
-      <p>
-        © <span class="year"></span> KUBA MEBLE <span class="block md:hidden"
+      <small>
+        © {new Date().getFullYear()} KUBA MEBLE <span class="block md:hidden"
         ></span> Wszelkie prawa zastrzeżone.
-      </p>
+      </small>
       <a
         href="https://zonka.software"
         target="_blank"
@@ -68,10 +67,3 @@ import logo2 from "../../img/svg/logo2.svg";
     </div>
   </div>
 </footer>
-
-<script>
-  const text = document.querySelector(".year");
-  const currentDate = new Date();
-  const currentYear = currentDate.getFullYear();
-  text.textContent = ` ${currentYear}`;
-</script>
