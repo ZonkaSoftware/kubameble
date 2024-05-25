@@ -18,10 +18,10 @@ const CENTER_STAGGER = -65;
 
 const SECTION_HEIGHT = 600;
 
-export const StaggerTestimonials = () => {
+export const StaggerTestimonials = ({ opinions }) => {
   const [cardSize, setCardSize] = useState(CARD_SIZE_LG);
 
-  const [testimonials, setTestimonials] = useState(TESTIMONIAL_DATA);
+  const [testimonials, setTestimonials] = useState(opinions);
 
   const handleMove = (position) => {
     const copy = [...testimonials];

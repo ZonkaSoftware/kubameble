@@ -13,8 +13,16 @@ import line2 from "../img/svg/line2.svg";
 import { getCollection } from "astro:content";
 
 const allBanners = await getCollection("banners");
+const allOpinions = await getCollection("opinions");
 
-const banners = allBanners.map((banner) => banner.data.bannerImage)
+const banners = (allBanners as any[]).map((banner) => banner.data.bannerImage);
+const opinions = (allOpinions as any[]).map((opinion, key) => {
+  return {
+    tempId: key,
+    testimonial: opinion.data.description,
+    by: opinion.data.by,
+  };
+});
 ---
 
 <Layout title="Kuba Meble">
@@ -32,7 +40,7 @@ const banners = allBanners.map((banner) => banner.data.bannerImage)
   </div>
   <main>
     <HowWeWork />
-    <StaggerTestimonials client:load />
+    <StaggerTestimonials opinions={opinions} client:load />
     <Info />
     <Contact />
   </main>

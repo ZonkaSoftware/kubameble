@@ -5,7 +5,7 @@ export default config({
     kind: "cloud",
   },
   cloud: {
-    project: "zonka-team/kubameble",
+    project: "kubameble/kubameble-site",
   },
   ui: {
     brand: {
@@ -61,6 +61,15 @@ export default config({
           links: true,
           images: true,
         }),
+      },
+    },
+    opinions: {
+      label: "Opinions",
+      slugField: "by",
+      path: "src/content/opinions/*",
+      schema: {
+        by: fields.slug({ name: { label: "Author" } }),
+        description: fields.text({ label: "Opinion" }),
       },
     },
   },
