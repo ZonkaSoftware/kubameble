@@ -5,7 +5,7 @@ export default config({
     kind: "cloud",
   },
   cloud: {
-    project: "zonka-team/kubameble",
+    project: "kubameble/kubameble-strona",
   },
   ui: {
     brand: {

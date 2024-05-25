@@ -49,16 +49,18 @@ import nip from "../img/svg/nip.svg"
         </div>
       </div>
       <div class="w-full lg:w-1/2">
-        <form class="flex flex-col">
+        <form class="flex flex-col" action="https://formsubmit.co/oskar.malinowski05@gmail.com" method="POST">
           <input
             class="bg-main border-2 border-second rounded-md placeholder-second px-4 py-2 mb-6 focus:outline-none focus:ring focus:ring-main"
             type="text"
-            placeholder="Imię"
+            required
+            placeholder="Imię *"
           />
           <input
             class="bg-main border-2 border-second rounded-md placeholder-second px-4 py-2 mb-6 focus:outline-none focus:ring focus:ring-main"
             type="text"
-            placeholder="Nazwisko"
+            placeholder="Nazwisko *"
+            required
           />
           <input
             class="bg-main border-2 border-second rounded-md placeholder-second px-4 py-2 mb-6 focus:outline-none focus:ring focus:ring-main"
@@ -68,11 +70,12 @@ import nip from "../img/svg/nip.svg"
           <input
             class="bg-main border-2 border-second rounded-md placeholder-second px-4 py-2 mb-6 focus:outline-none focus:ring focus:ring-main"
             type="email"
-            placeholder="Email"
+            required
+            placeholder="Email *"
           />
           <textarea
             class="bg-main border-2 border-second rounded-md placeholder-second px-4 py-2 mb-6 focus:outline-none focus:ring focus:ring-main"
-            placeholder="Wiadomość"></textarea>
+            placeholder="Wiadomość *" required></textarea>
           <input
             class="bg-main border-2 border-second rounded-md placeholder-second px-4 py-2 w-min self-end cursor-pointer mb-10 md:mb-0 hover:"
             type="submit"
