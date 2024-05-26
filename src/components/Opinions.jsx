@@ -74,7 +74,7 @@ export const StaggerTestimonials = ({ opinions }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       handleMove(1);
-    }, 5000);
+    }, 8000);
 
     return () => clearInterval(interval);
   });
