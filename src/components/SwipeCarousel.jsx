@@ -82,9 +82,12 @@ const Images = ({ imgIndex, imgs }) => {
           <motion.img
             key={idx}
             src={imgSrc}
+            height="50px"
+            width="50px"
             animate={{
               scale: imgIndex === idx ? 1 : 0.9,
             }}
+            loading="lazy"
             transition={SPRING_OPTIONS}
             className="aspect-video md:h-[60vh] w-full shrink-0 rounded-xl object-cover"
           />

@@ -17,7 +17,6 @@ const allPosts = await getCollection("realizations");
           <BlogPost
             url={post.slug}
             title={post.data.title}
-            image={post.data.mainImage}
           />
         ))
       }

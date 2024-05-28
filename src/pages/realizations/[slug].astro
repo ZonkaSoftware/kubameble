@@ -1,6 +1,7 @@
 ---
 import { getCollection, getEntry } from "astro:content";
 import MainLayout from "../../layouts/MainLayout.astro";
+import { Image } from "astro:assets";
 
 const { slug } = Astro.params;
 if (!slug) throw new Error("Slug not found");
@@ -14,14 +15,29 @@ export async function getStaticPaths() {
   const posts = await getCollection("realizations");
   return posts.map((post) => ({ params: { slug: post.slug } }));
 }
+
+const images = await Astro.glob("/src/assets/images/realizations/**/*").then(
+  (files) => {
+    return files.map((file) => file.default);
+  }
+);
+
+const currentImages = images.filter((image) => image.src.includes(`/${slug}/`));
+
+const mainImage = currentImages.find((image) => image.src.includes("/mainImage"));
+const subImages = currentImages.filter((image) => !image.src.includes("/mainImage")); 
+
 ---
 
 <MainLayout title={post.data.title}>
   <div class="relative overflow-hidden" style="height: 400px;">
-    <img
-      src={post.data.mainImage}
+    <Image
+      src={mainImage}
+      width={1000}
+      height={1000}
       class="absolute inset-0 w-full h-full object-cover my-10"
       alt="Głowne zdjęcie"
+      format="webp"
     />
   </div>
   <h1
@@ -31,10 +47,17 @@ export async function getStaticPaths() {
   </h1>
   <p class="mb-10"><Content /></p>
   {
-    post.data.images.length > 0 && (
+    subImages.length > 0 && (
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-8">
-        {post.data.images.map((image) => (
-          <img src={image} class="w-full h-full object-cover" alt="Zdjęcie" />
+        {subImages.map((image) => (
+          <Image
+            width={800}
+            height={800}
+            src={image}
+            class="w-full h-full object-cover"
+            alt="Zdjęcie"
+            format="webp"
+          />
         ))}
       </div>
     )
