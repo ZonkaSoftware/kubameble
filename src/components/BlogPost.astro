@@ -5,27 +5,18 @@ import HeadingThree from "./ui/HeadingThree.astro";
 
 // import image from "../../src/img/1.jpg"
 
-const { title, url } = Astro.props;
+const { title, url, image } = Astro.props;
 
-const images = await Astro.glob("/src/assets/images/realizations/**/*").then(
-  (files) => {
-    return files.map((file) => file.default);
-  }
-);
-
-const currentImages = images.filter((image) => image.src.includes(`/${url}/`));
-
-const mainImage = currentImages.find((image) =>
-  image.src.includes("/mainImage")
-);
+const images = import.meta.glob("../assets/images/realizations/**/*");
 ---
 
 <a href={`/realizations/${url}`} class="block w-full group overflow-hidden">
   <div class="relative w-full" style="padding-top: 100%;">
     {
-      mainImage && (
+      url && (
+        //@ts-ignore
         <Image
-          src={mainImage}
+          src={images[image.slice(3)]()}
           alt={title}
           width={500}
           height={500}

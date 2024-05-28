@@ -16,23 +16,14 @@ export async function getStaticPaths() {
   return posts.map((post) => ({ params: { slug: post.slug } }));
 }
 
-const images = await Astro.glob("/src/assets/images/realizations/**/*").then(
-  (files) => {
-    return files.map((file) => file.default);
-  }
-);
-
-const currentImages = images.filter((image) => image.src.includes(`/${slug}/`));
-
-const mainImage = currentImages.find((image) => image.src.includes("/mainImage"));
-const subImages = currentImages.filter((image) => !image.src.includes("/mainImage")); 
-
+const images = import.meta.glob("../../assets/images/realizations/**/*");
 ---
 
 <MainLayout title={post.data.title}>
   <div class="relative overflow-hidden" style="height: 400px;">
+    <!-- @ts-ignore -->
     <Image
-      src={mainImage}
+      src={images[post.data.mainImage]()}
       width={1000}
       height={1000}
       class="absolute inset-0 w-full h-full object-cover my-10"
@@ -47,13 +38,14 @@ const subImages = currentImages.filter((image) => !image.src.includes("/mainImag
   </h1>
   <p class="mb-10"><Content /></p>
   {
-    subImages.length > 0 && (
+    post.data.images.length > 0 && (
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-8">
-        {subImages.map((image) => (
+        {post.data.images.map((image) => (
+          //@ts-ignore
           <Image
             width={800}
             height={800}
-            src={image}
+            src={images[image]()}
             class="w-full h-full object-cover"
             alt="Zdjęcie"
             format="webp"

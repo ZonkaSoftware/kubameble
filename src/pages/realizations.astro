@@ -16,6 +16,7 @@ const allPosts = await getCollection("realizations");
         allPosts.map((post) => (
           <BlogPost
             url={post.slug}
+            image={post.data.mainImage}
             title={post.data.title}
           />
         ))
