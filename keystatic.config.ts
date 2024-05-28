@@ -2,11 +2,11 @@ import { config, fields, collection } from "@keystatic/core";
 
 export default config({
   storage: {
-    kind: "cloud",
+    kind: "local",
   },
-  cloud: {
-    project: "kubameble/kubameble-strona",
-  },
+  // cloud: {
+  //   project: "kubameble/kubameble-strona",
+  // },
   ui: {
     brand: {
       name: "KUBA MEBLE",
@@ -51,8 +51,8 @@ export default config({
         title: fields.slug({ name: { label: "Title" } }),
         bannerImage: fields.image({
           label: "Banners",
-          directory: "src/assets/images/banners",
-          publicPath: "../../assets/images/banners/",
+          directory: "public/images/banners",
+          publicPath: "/images/banners",
         }),
         description: fields.document({
           label: "Content",

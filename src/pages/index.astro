@@ -23,16 +23,9 @@ const opinions = (allOpinions as any[]).map((opinion, key) => {
   };
 });
 
-const images = await Astro.glob("/src/assets/images/banners/**/*").then(
-  (files) => {
-    return files.map((file) => file.default);
-  }
-);
+const allBanners = await getCollection("banners");
 
-const currentImages = images.filter((image) => image.src.includes(`/banners/`));
-
-const bannerImages = currentImages.map((image) => image.src);
-
+const banners = allBanners.map((banner) => banner.data.bannerImage);
 ---
 
 <Layout title="Kuba Meble">
@@ -40,7 +33,7 @@ const bannerImages = currentImages.map((image) => image.src);
     class="relative md:h-screen md:flex md:flex-col md:justify-center overflow-hidden"
   >
     <Navigation />
-    <SwipeCarousel banners={bannerImages} client:load />
+    <SwipeCarousel banners={banners} client:load />
     <span class="absolute bottom-0 left-0 -z-10 hidden lg:block"
       ><Image src={line1} alt="" /></span
     >
