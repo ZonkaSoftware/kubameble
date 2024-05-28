@@ -12,12 +12,9 @@ import line1 from "../img/svg/line1.svg";
 import line2 from "../img/svg/line2.svg";
 import { getCollection } from "astro:content";
 import HeadingTwo from "../components/ui/HeadingTwo.astro";
-import Container from "../components/ui/Container.astro";
 
-const allBanners = await getCollection("banners");
 const allOpinions = await getCollection("opinions");
 
-const banners = (allBanners as any[]).map((banner) => banner.data.bannerImage);
 const opinions = (allOpinions as any[]).map((opinion, key) => {
   return {
     tempId: key,
@@ -25,6 +22,17 @@ const opinions = (allOpinions as any[]).map((opinion, key) => {
     by: opinion.data.by,
   };
 });
+
+const images = await Astro.glob("/src/assets/images/banners/**/*").then(
+  (files) => {
+    return files.map((file) => file.default);
+  }
+);
+
+const currentImages = images.filter((image) => image.src.includes(`/banners/`));
+
+const bannerImages = currentImages.map((image) => image.src);
+
 ---
 
 <Layout title="Kuba Meble">
@@ -32,7 +40,7 @@ const opinions = (allOpinions as any[]).map((opinion, key) => {
     class="relative md:h-screen md:flex md:flex-col md:justify-center overflow-hidden"
   >
     <Navigation />
-    <SwipeCarousel banners={banners} client:load />
+    <SwipeCarousel banners={bannerImages} client:load />
     <span class="absolute bottom-0 left-0 -z-10 hidden lg:block"
       ><Image src={line1} alt="" /></span
     >
