@@ -29,14 +29,14 @@ export default config({
         }),
         mainImage: fields.image({
           label: "Main image",
-          directory: "public/images/realizations",
-          publicPath: "/images/realizations",
+          directory: "src/assets/images/realizations",
+          publicPath: "../../assets/images/realizations/",
         }),
         images: fields.array(
           fields.image({
             label: "Images",
-            directory: "public/images/realizations",
-            publicPath: "/images/realizations",
+            directory: "src/assets/images/realizations",
+            publicPath: "../../assets/images/realizations/",
           })
         ),
         date: fields.date({ label: "Date", defaultValue: "today" }),

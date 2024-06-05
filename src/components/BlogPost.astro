@@ -1,19 +1,29 @@
 ---
 // import { Image } from "astro:assets";
+import { Image } from "astro:assets";
 import HeadingThree from "./ui/HeadingThree.astro";
 
 // import image from "../../src/img/1.jpg"
 
 const { title, url, image } = Astro.props;
+
+const images = import.meta.glob("../assets/images/realizations/**/*");
 ---
 
 <a href={`/realizations/${url}`} class="block w-full group overflow-hidden">
   <div class="relative w-full" style="padding-top: 100%;">
-    <img
-      src={image}
-      alt={title}
-      class="absolute inset-0 w-full h-full object-cover rounded-md group-hover:transform transition-transform duration-300 ease-in-out group-hover:scale-110"
-    />
+    {
+      url && (
+        //@ts-ignore
+        <Image
+          src={images[image.slice(3)]()}
+          alt={title}
+          width={500}
+          height={500}
+          class="absolute inset-0 w-full h-full object-cover rounded-md group-hover:transform transition-transform duration-300 ease-in-out group-hover:scale-110"
+        />
+      )
+    }
   </div>
   <div class="mt-4 group-hover:text-main duration-200 ease-in-out">
     <HeadingThree h3={title} />
