@@ -13,6 +13,7 @@ import line2 from "../img/svg/line2.svg";
 import { getCollection } from "astro:content";
 import HeadingTwo from "../components/ui/HeadingTwo.astro";
 import Container from "../components/ui/Container.astro";
+import Carousel from "../components/Carousel.astro";
 
 const allBanners = await getCollection("banners");
 const allOpinions = await getCollection("opinions");
@@ -32,7 +33,8 @@ const opinions = (allOpinions as any[]).map((opinion, key) => {
     class="relative md:h-screen md:flex md:flex-col md:justify-center overflow-hidden"
   >
     <Navigation />
-    <SwipeCarousel banners={banners} client:load />
+    <!-- <SwipeCarousel banners={banners} client:load /> -->
+    <Carousel />
     <span class="absolute bottom-0 left-0 -z-10 hidden lg:block"
       ><Image src={line1} alt="" /></span
     >
