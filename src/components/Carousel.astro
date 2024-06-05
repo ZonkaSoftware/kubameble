@@ -5,7 +5,7 @@ const allImages = await getCollection("banners");
 ---
 
 <header class="relative container object-contain md:h-[65vh] py-10 ">
-  <div class=" w-full  h-full relative"> <!-- Added 'relative' class to carousel -->
+  <div class=" w-full  h-full relative overflow-hidden"> <!-- Added 'relative' class to carousel -->
     <div class="carousel w-full overflow-hidden rounded-lg  h-full  ">
       <div class="carousel-content flex transition-transform duration-500 h-full ">
         {allImages.map((img, index) => (
