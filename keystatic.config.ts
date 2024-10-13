@@ -1,11 +1,14 @@
 import { config, fields, collection } from "@keystatic/core";
 
 export default config({
+  // storage: {
+  //   kind: "cloud",
+  // },
+  // cloud: {
+  //   project: "kubameble/kubameble-strona",
+  // },
   storage: {
-    kind: "cloud",
-  },
-  cloud: {
-    project: "kubameble/kubameble-strona",
+    kind: "local",
   },
   ui: {
     brand: {

@@ -8,8 +8,8 @@ const allImages = await getCollection("banners");
   <div class=" w-full  h-full relative "> <!-- Added 'relative' class to carousel -->
     <div class="carousel w-full overflow-hidden rounded-lg  h-full  ">
       <div class="carousel-content flex transition-transform duration-500 h-full ">
-        {allImages.map((img, index) => (
-          <div key={index} class="slide  min-w-full h-full flex items-center justify-center relative"> <!-- Added 'relative' class to slide -->
+        {allImages.map((img) => (
+          <div class="slide  min-w-full h-full flex items-center justify-center relative"> <!-- Added 'relative' class to slide -->
             <Image class="h-auto w-full object-cover" height="500" width="1000" src={img.data.bannerImage} alt={img.data.title} />
           </div>
         ))}
