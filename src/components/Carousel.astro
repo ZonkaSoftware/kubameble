@@ -4,13 +4,13 @@ import { getCollection } from "astro:content";
 const allImages = await getCollection("banners");
 ---
 
-<header class=" container object-contain md:h-[80vh] mt-20 md:mt-0 py-10 ">
-  <div class=" w-full  h-full relative "> <!-- Added 'relative' class to carousel -->
-    <div class="carousel w-full overflow-hidden rounded-lg  h-full  ">
+<header class=" container object-contain mt-20 md:mt-0 py-10 ">
+  <div class=" w-full h-full relative "> <!-- Added 'relative' class to carousel -->
+    <div class="carousel w-full overflow-hidden rounded-lg h-full  ">
       <div class="carousel-content flex transition-transform duration-500 h-full ">
         {allImages.map((img) => (
           <div class="slide  min-w-full h-full flex items-center justify-center relative"> <!-- Added 'relative' class to slide -->
-            <Image class="h-auto w-full object-cover" height="1000" width="1500" src={img.data.bannerImage} alt={img.data.title} />
+            <Image class="h-auto w-full object-cover aspect-video" height="1000" width="1500" src={img.data.bannerImage} alt={img.data.title} />
           </div>
         ))}
       </div>

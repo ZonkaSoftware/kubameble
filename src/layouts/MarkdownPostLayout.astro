@@ -4,7 +4,7 @@ const { frontmatter } = Astro.props;
 ---
 
 <MainLayout pageTitle={frontmatter.title}>
-  <div class="relative overflow-hidden" style="height: 400px;">
+  <div class="relative overflow" style="height: 400px;">
     <img
       src={frontmatter.image.url}
       class="absolute inset-0 w-full h-full object-cover my-10"

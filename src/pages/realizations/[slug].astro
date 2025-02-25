@@ -20,13 +20,13 @@ const images = import.meta.glob("../../assets/images/realizations/**/*");
 ---
 
 <MainLayout title={post.data.title}>
-  <div class="relative overflow-hidden" style="height: 400px;">
+  <div class="relative overflow-hidden" style="height: 800px;">
     <!-- @ts-ignore -->
     <Image
       src={images[post.data.mainImage]()}
-      width={1000}
+      width={1500}
       height={1000}
-      class="absolute inset-0 w-full h-full object-cover my-10"
+      class="absolute inset-0 w-full h-full object-cover my-12"
       alt="Głowne zdjęcie"
       format="webp"
     />
@@ -43,8 +43,8 @@ const images = import.meta.glob("../../assets/images/realizations/**/*");
         {post.data.images.map((image) => (
           //@ts-ignore
           <Image
-            width={800}
-            height={800}
+            width={1000}
+            height={1000}
             src={images[image]()}
             class="w-full h-full object-cover"
             alt="Zdjęcie"
