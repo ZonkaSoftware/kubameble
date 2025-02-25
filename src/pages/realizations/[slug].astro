@@ -20,13 +20,13 @@ const images = import.meta.glob("../../assets/images/realizations/**/*");
 ---
 
 <MainLayout title={post.data.title}>
-  <div class="relative overflow-hidden" style="height: 800px;">
+  <div class="">
     <!-- @ts-ignore -->
     <Image
       src={images[post.data.mainImage]()}
       width={1500}
       height={1000}
-      class="absolute inset-0 w-full h-full object-cover my-12"
+      class="aspect-video w-full h-full object-cover my-12"
       alt="Głowne zdjęcie"
       format="webp"
     />
